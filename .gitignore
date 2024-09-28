@@ -30,7 +30,10 @@ npm-debug.log*
 # other
 .DS_Store
 
-.env
+/.env
+/.env.production
+/.env.development
+/.env.local
 
 # cache
 /article-cache/
