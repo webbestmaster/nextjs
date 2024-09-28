@@ -380,6 +380,15 @@ export default [
 
             // Res
             "_res/*",
+
+            // NextJS
+            ".next",
+            "out",
+            "next-env.d.ts",
+            "next.config.mjs",
+
+            // ESLint
+            "eslint.config.mjs",
         ],
     },
 ];
