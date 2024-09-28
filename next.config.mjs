@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export", // check "out" folder
+    output: "export", // Check "out" folder
 };
 
 export default nextConfig;

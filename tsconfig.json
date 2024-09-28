@@ -13,6 +13,7 @@
   ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
+
     /* Projects */
     // "incremental": true, /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
     // "composite": true, /* Enable constraints that allow a TypeScript project to be used with project references. */
@@ -20,6 +21,7 @@
     // "disableSourceOfProjectReferenceRedirect": true, /* Disable preferring source files instead of declaration files when referencing composite projects. */
     // "disableSolutionSearching": true, /* Opt a project out of multi-project reference checking when editing. */
     // "disableReferencedProjectLoad": true, /* Reduce the number of projects loaded automatically by TypeScript. */
+
     /* Language and Environment */
     "target": "es2023",
     /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
@@ -27,7 +29,7 @@
       "ES2023.Array"
     ],
     /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     /* Specify what JSX code is generated. */
     "experimentalDecorators": true,
     /* Enable experimental support for legacy experimental decorators. */
@@ -42,6 +44,7 @@
     "useDefineForClassFields": false,
     /* Emit ECMAScript-standard-compliant class fields. */
     // "moduleDetection": "auto", /* Control what method is used to detect module-format JS files. */
+
     /* Modules */
     "module": "es2020",
     /* Specify what module code is generated. */
@@ -63,12 +66,14 @@
     /* Enable importing .json files. */
     // "allowArbitraryExtensions": true, /* Enable importing files with any extension, provided a declaration file is present. */
     // "noResolve": true, /* Disallow 'import's, 'require's or '<reference>'s from expanding the number of files TypeScript should add to a project. */
+
     /* JavaScript Support */
     "allowJs": false,
     /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
     "checkJs": false,
     /* Enable error reporting in type-checked JavaScript files. */
     // "maxNodeModuleJsDepth": 1, /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */
+
     /* Emit */
     "declaration": false,
     /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
@@ -105,6 +110,7 @@
     /* Disable erasing 'const enum' declarations in generated code. */
     // "declarationDir": "./", /* Specify the output directory for generated declaration files. */
     // "preserveValueImports": true, /* Preserve unused imported values in the JavaScript output that would otherwise be removed. */
+
     /* Interop Constraints */
     // "isolatedModules": true, /* Ensure that each file can be safely transpiled without relying on other imports. */
     // "verbatimModuleSyntax": true, /* Do not transform or elide any imports or exports not marked as type-only, ensuring they are written in the output file's format based on the 'module' setting. */
@@ -115,6 +121,7 @@
     // "preserveSymlinks": true, /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
     "forceConsistentCasingInFileNames": true,
     /* Ensure that casing is correct in imports. */
+
     /* Type Checking */
     "strict": true,
     /* Enable all strict type-checking options. */
@@ -154,19 +161,24 @@
     /* Disable error reporting for unused labels. */
     "allowUnreachableCode": true,
     /* Disable error reporting for unreachable code. */
+
     /* Completeness */
     "skipDefaultLibCheck": true,
     /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true,
     /* Skip type checking all .d.ts files. */
+
     //////////////
     // Appendix //
     //////////////
+
     // https://www.typescriptlang.org/tsconfig
+
     // -=-=-=- Editor Support -=-=-=-
     "disableSizeLimit": true,
     // no defined my config
     // "plugins": false,
+
     // -=-=-=- Backwards Compatibility -=-=-=-
     "noStrictGenericChecks": false,
     // no defined my config
@@ -176,6 +188,7 @@
     // "out": false,
     // "suppressExcessPropertyErrors": false,
     // "suppressImplicitAnyIndexErrors": false,
+
     // -=-=-=- Compiler Diagnostics -=-=-=-
     // no defined my config
     // "diagnostics": false,
@@ -185,21 +198,16 @@
     // "listEmittedFiles": false,
     // "listFiles": false,
     // "traceResolution": false,
+
     // -=-=-=- Output Formatting -=-=-=-
     "pretty": true,
     "noErrorTruncation": true,
     "preserveWatchOutput": false,
     // -=-=-=- Command Line -=-=-=-
     // no properties yet
+
     // -=-=-=- Watch Options -=-=-=-
-    "assumeChangesOnlyAffectDirectDependencies": false,
-    "incremental": true,
-    "isolatedModules": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "assumeChangesOnlyAffectDirectDependencies": false
   },
   "watchOptions": {
     // no defined my config
@@ -222,11 +230,5 @@
       "module": "CommonJS",
       "exactOptionalPropertyTypes": false
     }
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ]
+  }
 }

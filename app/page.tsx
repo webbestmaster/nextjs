@@ -1,11 +1,13 @@
-import styles from "./page.module.css";
+import type {JSX} from "react";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <h1>the page</h1>
-      </main>
-    </div>
-  );
+import styles from "./page.module.scss";
+
+export default function Home(): JSX.Element {
+    return (
+        <div className={styles.page}>
+            <main className={styles.main}>
+                <h1>the page</h1>
+            </main>
+        </div>
+    );
 }

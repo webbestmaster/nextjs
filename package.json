@@ -19,40 +19,77 @@
     "nextjs",
     "empty"
   ],
-  "main": "dist/index.js",
-  "types": "dist/library.d.ts",
-  "files": [
-    "/dist"
-  ],
   "engines": {
     "node": ">=18.0.0"
+  },
+  "watch": {
+    "eslint": {
+      "patterns": [
+        "www",
+        "server",
+        "webpack"
+      ],
+      "extensions": "ts,tsx",
+      "quiet": false
+    },
+    "ts-coverage": {
+      "patterns": [
+        "www",
+        "server",
+        "webpack"
+      ],
+      "extensions": "ts,tsx",
+      "quiet": false
+    },
+    "stylelint": {
+      "patterns": [
+        "www"
+      ],
+      "extensions": "scss",
+      "quiet": false
+    }
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "__lint": "next lint"
+    "__lint": "next lint",
+    "check": "npm run ts-coverage && npm run tsc && npm run eslint && npm run stylelint",
+    "check:fix": "npm run prettier && npm run ts-coverage && npm run tsc && npm run eslint:fix && npm run stylelint:fix",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint . --fix",
+    "eslint:watch": "npm-watch eslint",
+    "stylelint": "stylelint ./**.scss",
+    "stylelint:fix": "stylelint ./**.scss --fix",
+    "stylelint:watch": "npm-watch stylelint",
+    "prettier": "prettier --write \"./**/*.(js|ts|tsx)\" --log-level warn",
+    "tsc": "tsc -p ./tsconfig.json",
+    "tsc-init": "npx tsc --init",
+    "tsc:watch": "tsc -p ./tsconfig.json --watch",
+    "ts-coverage": "rimraf .next && rimraf out && rimraf coverage-ts && typescript-coverage-report --threshold=100 --strict=true --project ./",
+    "ts-coverage:watch": "npm-watch ts-coverage",
+    "pre-commit-hook": "npm run check"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "next": "14.2.13",
-    "@types/react": "^18.3.9",
+    "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/plugin-transform-strict-mode": "^7.24.7",
     "@eslint/js": "^9.11.1",
-    "@storybook/addon-actions": "^8.3.3",
-    "@storybook/addon-essentials": "^8.3.3",
-    "@storybook/addon-interactions": "^8.3.3",
-    "@storybook/addon-links": "^8.3.3",
-    "@storybook/blocks": "^8.3.3",
-    "@storybook/builder-webpack5": "^8.3.3",
+    "@storybook/addon-actions": "^8.3.4",
+    "@storybook/addon-essentials": "^8.3.4",
+    "@storybook/addon-interactions": "^8.3.4",
+    "@storybook/addon-links": "^8.3.4",
+    "@storybook/blocks": "^8.3.4",
+    "@storybook/builder-webpack5": "^8.3.4",
     "@storybook/manager-webpack5": "^6.5.16",
-    "@storybook/react": "^8.3.3",
-    "@storybook/react-webpack5": "^8.3.3",
+    "@storybook/react": "^8.3.4",
+    "@storybook/react-webpack5": "^8.3.4",
     "@storybook/testing-library": "^0.2.2",
     "@testing-library/react": "^16.0.1",
     "@types/circular-dependency-plugin": "^5.0.8",
@@ -75,7 +112,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jest": "^28.8.3",
     "eslint-plugin-jsx-a11y": "^6.10.0",
-    "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-sonarjs": "^2.0.2",
@@ -89,12 +126,12 @@
     "nodemon": "^3.1.7",
     "npm-watch": "^0.13.0",
     "prettier": "^3.3.3",
-    "puppeteer": "^23.4.0",
+    "puppeteer": "^23.4.1",
     "raw-loader": "^4.0.2",
-    "sass": "^1.79.3",
+    "sass": "^1.79.4",
     "sass-loader": "^16.0.2",
     "script-ext-html-webpack-plugin": "^2.1.5",
-    "storybook": "^8.3.3",
+    "storybook": "^8.3.4",
     "style-loader": "^4.0.0",
     "stylelint": "^16.9.0",
     "stylelint-config-standard": "^36.0.1",
@@ -108,7 +145,7 @@
     "typescript": "^5.6.2",
     "typescript-coverage-report": "^1.0.0",
     "typescript-eslint": "^8.7.0",
-    "webpack": "^5.94.0",
+    "webpack": "^5.95.0",
     "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0",
