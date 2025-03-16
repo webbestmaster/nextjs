@@ -1,4 +1,4 @@
-/* eslint-disable sort-keys, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable sort-keys, @typescript-eslint/no-unsafe-member-access, sonarjs/todo-tag */
 import eslintJs from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import jest from "eslint-plugin-jest";
@@ -70,25 +70,11 @@ export default [
             },
         },
         settings: {react: {version: "detect"}},
-        plugins: {
-            unicorn: eslintPluginUnicorn,
-            // Sonarjs: sonarjs,
-        },
+        plugins: {unicorn: eslintPluginUnicorn},
         rules: {
             // Jest
             ...jest.configs["flat/all"].rules,
             "jest/require-hook": [2, {allowedFunctionCalls: ["innerInitialization"]}],
-
-            "sonarjs/sonar-no-unused-vars": "off",
-            "sonarjs/sonar-prefer-read-only-props": "off",
-            "sonarjs/no-dead-store": "off",
-            "sonarjs/sonar-no-fallthrough": "off",
-            "sonarjs/todo-tag": "off",
-            "sonarjs/no-commented-code": "off",
-            "sonarjs/pseudo-random": "off",
-            "sonarjs/pseudo-randoms": "off",
-            "sonarjs/no-invariant-returns": "off",
-            "sonarjs/function-return-type": "off",
 
             // React
             "react/jsx-uses-react": 2,
@@ -250,7 +236,8 @@ export default [
             "unicorn/filename-case": 2,
             "unicorn/no-array-reduce": 0,
             "unicorn/no-null": 0,
-            "unicorn/no-fn-reference-in-iterator": 2,
+            "sonarjs/no-commented-code": 0,
+            // "unicorn/no-fn-reference-in-iterator": 2,
             "unicorn/prevent-abbreviations": [
                 2,
                 {
