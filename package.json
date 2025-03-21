@@ -78,9 +78,9 @@
     "pre-commit-hook": "npm run check"
   },
   "dependencies": {
-    "@types/react": "^19.0.10",
+    "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
-    "next": "15.2.2",
+    "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -103,7 +103,7 @@
     "jest-transform-stub": "^2.0.0",
     "prettier": "^3.5.3",
     "rimraf": "^6.0.1",
-    "sass": "^1.85.1",
+    "sass": "^1.86.0",
     "semantic-ui-react": "^2.1.5",
     "stylelint": "^16.16.0",
     "stylelint-config-standard": "^37.0.0",
@@ -114,6 +114,6 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2",
     "typescript-coverage-report": "^1.1.1",
-    "typescript-eslint": "^8.26.1"
+    "typescript-eslint": "^8.27.0"
   }
 }
