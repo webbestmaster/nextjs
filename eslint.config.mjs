@@ -309,7 +309,7 @@ export default [
             "newline-per-chained-call": [2, {ignoreChainWithDepth: 4}],
             "function-paren-newline": 0,
             "capitalized-comments": [
-                2,
+                0,
                 "always",
                 {
                     ignorePattern: "ignored|webpackChunkName",
@@ -373,6 +373,7 @@ export default [
             "out",
             "next-env.d.ts",
             "next.config.mjs",
+            "app/image/**",
 
             // ESLint
             "eslint.config.mjs",
