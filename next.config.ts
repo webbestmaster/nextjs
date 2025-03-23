@@ -1,6 +1,6 @@
-// @ts-check
 import dotenv from "dotenv";
 
+// eslint-disable-next-line jest/require-hook
 dotenv.config();
 
 // const imageLoader = ({ src, width, quality }) => {

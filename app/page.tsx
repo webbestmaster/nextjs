@@ -1,10 +1,20 @@
 import Image from "next/image";
 import type {JSX} from "react";
 
+// import {getSha256HashServer} from "../util/string";
+// import {authCrud} from "./auth/auth";
+// import {UserRoleEnum} from "./auth/user/user-context-type";
 import img from "./image/images.png";
 import styles from "./page.module.scss";
 
 export default function Home(): JSX.Element {
+    // authCrud.createOne({
+    //     id: "some-user-id",
+    //     login: "the-admin",
+    //     password: getSha256HashServer("123456"),
+    //     role: UserRoleEnum.admin,
+    // });
+
     return (
         <div className={styles.page}>
             <main className={styles.main}>
