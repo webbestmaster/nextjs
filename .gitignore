@@ -47,3 +47,4 @@ npm-debug.log*
 # nextjs
 /.next
 /out
+/next-env.d.ts

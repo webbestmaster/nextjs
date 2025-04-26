@@ -11,7 +11,12 @@ export const jestTestUnitConfig: Config = {
     moduleNameMapper: {
         "^\\S+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
     },
-    modulePathIgnorePatterns: ["<rootDir>/tsc-check/"],
+    modulePathIgnorePatterns: [
+        "<rootDir>/node_modules/",
+        "<rootDir>/coverage/",
+        "<rootDir>/coverage-ts/",
+        "<rootDir>/tsc-check/",
+    ],
     passWithNoTests: true,
     preset: "ts-jest",
     rootDir: "../../",
