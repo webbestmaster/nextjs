@@ -1,18 +1,14 @@
 import dotenv from "dotenv";
+import type {NextConfig} from "next";
 
 // eslint-disable-next-line jest/require-hook
 dotenv.config();
 
-// const imageLoader = ({ src, width, quality }) => {
-//     return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
-// }
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
     images: {
-        // loader: 'custom',
-        // loaderFile: './app/image/image-loader.js',
         deviceSizes: [320, 480, 640, 750, 828, 1080, 1200, 1920],
+        // loader: "custom",
+        // loaderFile: "./app/image/image-loader.ts",
         // deviceSizes: [320, 480, 640, 750],
         // imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     },
